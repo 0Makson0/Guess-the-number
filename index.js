@@ -22,6 +22,12 @@ button_Im.addEventListener("click", () => {
 	inputContainer.appendChild(inputIm)
 })
 
+button_Ai.addEventListener("click", () => {
+	const message = document.createElement("p")
+	message.textContent = "Я загадав число. Вгадуй";
+	inputContainer.appendChild(message)
+})
+
 const randomAi = function() {
 	return Math.floor(Math.random() * 100) + 1;
 }
