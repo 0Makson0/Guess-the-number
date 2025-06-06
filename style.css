@@ -1,3 +1,151 @@
-.button_Im, .button_Ai{
-	display: inline;
+body {
+    background: #1a1a2e;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    color: #e0e0e0;
+    text-align: center;
+}
+
+#gameContainer {
+    background: #16213e;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+    max-width: 550px;
+    width: 100%;
+}
+
+.button_Im, .button_Ai {
+    display: inline-block;
+    padding: 12px 24px;
+    margin: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #0ff;
+    background: #0a192f;
+    border: 2px solid #0ff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: box-shadow 0.3s, transform 0.1s;
+}
+
+.button_Im:hover, .button_Ai:hover {
+    box-shadow: 0 0 10px #0ff;
+    transform: scale(1.03);
+}
+
+.button_Im:active, .button_Ai:active {
+    box-shadow: 0 0 5px #0ff;
+    transform: scale(0.97);
+}
+
+#button_users button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: box-shadow 0.3s, transform 0.1s;
+}
+
+#button_users button:nth-child(1) {
+    background: #ff2e63;
+    box-shadow: 0 0 5px #ff2e63;
+}
+
+#button_users button:nth-child(2) {
+    background: #00ff7f;
+    box-shadow: 0 0 5px #00ff7f;
+}
+
+#button_users button:nth-child(3) {
+    background: #ffd700;
+    color: #1a1a2e;
+    box-shadow: 0 0 5px #ffd700;
+}
+
+#button_users button:hover {
+    box-shadow: 0 0 10px;
+    transform: scale(1.03);
+}
+
+#button_users button:active {
+    transform: scale(0.97);
+}
+
+#inputIm, #inputAi {
+    display: inline-block;
+    width: 150px;
+    padding: 10px;
+    margin: 10px;
+    font-size: 16px;
+    background: #0a192f;
+    color: #e0e0e0;
+    border: 2px solid #0ff;
+    border-radius: 5px;
+    outline: none;
+    transition: box-shadow 0.3s;
+}
+
+#inputIm:focus, #inputAi:focus {
+    box-shadow: 0 0 10px #0ff;
+}
+
+#inputIm::placeholder, #inputAi::placeholder {
+    color: #6272a4;
+}
+
+#creat_p p, #input_container p, #input_container_users p {
+    margin: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #e0e0e0;
+    animation: fadeIn 0.4s ease-in;
+}
+
+#creat_p p:contains("Мало"), #input_container p:contains("Мало") {
+    color: #ff2e63;
+}
+
+#creat_p p:contains("Багато"), #input_container p:contains("Багато") {
+    color: #00ff7f;
+}
+
+#creat_p p:contains("Ти вгадав"), #input_container_users p:contains("вгадав") {
+    color: #ffd700;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 480px) {
+    #gameContainer {
+        padding: 15px;
+        max-width: 90%;
+    }
+
+    .button_Im, .button_Ai, #button_users button {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+
+    #inputIm, #inputAi {
+        width: 130px;
+        font-size: 14px;
+    }
+
+    #creat_p p, #input_container p, #input_container_users p {
+        font-size: 16px;
+    }
 }
